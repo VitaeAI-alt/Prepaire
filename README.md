@@ -7,7 +7,7 @@ Key Steps:
 
 Data Input: A CSV file containing taxonomic classifications and associated species counts.
 Processing & Summarization:
-Compute the total species count for each phylum.
+Compute the total species count for each phylum. 
 Calculate the average species count per species within each phylum.
 Visualization: Generate a bar chart (phylum_species_count.png) that displays the total species count per phylum.
 Output: Write processed summary results to phylum_summary.csv and produce the visualization image.
