@@ -46,7 +46,7 @@ A Python-based workflow for analyzing taxonomic species data and generating summ
 ### Steps
 
 #### 1. Build the Docker Image
-```bash
+bash
 docker build -t taxonomic-analyzer .
 
 2. Run the Container
