@@ -14,7 +14,7 @@ A Python-based workflow for analyzing taxonomic species data and generating summ
 3. **Visualization**: Generate a bar chart (`phylum_species_count.png`) displaying the total species count per phylum.
 4. **Output**: Write summarized results to `phylum_summary.csv` and produce the visualization.
 
-### Technologies & Tools
+### Technologies & Tools 
 - **Python 3**: Core language for data processing.
 - **Pandas**: For data manipulation and aggregation.
 - **Matplotlib**: For creating visualizations.
