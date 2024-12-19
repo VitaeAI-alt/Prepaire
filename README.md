@@ -2,7 +2,7 @@
 
 This project provides a Python-based workflow for analyzing taxonomic species data and generating summary statistics and visualizations. The objective is to process a given dataset (taxonomic_data.csv), produce a summary of species counts by phylum, calculate averages, and create a bar chart visualization. The process is containerized using Docker for easy setup and reproducibility.
 
-Overview
+Overview 
 Key Steps:
 
 Data Input: A CSV file containing taxonomic classifications and associated species counts.
