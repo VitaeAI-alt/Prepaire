@@ -48,3 +48,46 @@ A Python-based workflow for analyzing taxonomic species data and generating summ
 #### 1. Build the Docker Image
 ```bash
 docker build -t taxonomic-analyzer .
+
+#### 2. Run the Container
+Run the container, mounting your current directory to access input data and write output files:
+```bash
+docker run -v $(pwd):/data taxonomic-analyzer \
+python analysis_script.py --input /data/taxonomic_data.csv --output /data
+
+### Explanation
+
+- `-v $(pwd):/data`: Mounts your current directory to `/data` inside the container.
+- `--input /data/taxonomic_data.csv`: Specifies the input file location inside the container.
+- `--output /data`: Outputs (`phylum_summary.csv` and `phylum_species_count.png`) will be saved to your host directory.
+
+---
+
+### 3. Check the Outputs
+After the container finishes running, you should see the following in your working directory:
+- **`phylum_summary.csv`**: Summarized results of species counts by phylum.
+- **`phylum_species_count.png`**: A bar chart visualization of total species count per phylum.
+
+---
+
+## 📝 Notes & Assumptions
+
+### Data Handling
+- Missing or invalid data is handled gracefully:
+  - Missing counts are treated as zero.
+  - Rows with missing phylum information are excluded.
+
+### Customization
+- **Modify the Input Dataset**: Analyze different taxonomic data by replacing or editing `taxonomic_data.csv`.
+- **Adjust Script Logic**: Update `analysis_script.py` to perform additional computations or create alternate visualizations.
+
+### Dependencies
+- If you need to add or update Python dependencies:
+  1. Edit the `requirements.txt` file.
+  2. Rebuild the Docker image using the steps outlined in the **Running the Analysis** section.
+
+---
+
+## 📜 License
+This project is for demonstration purposes and may not be under any specific license. Ensure compliance with your organization’s data handling and licensing requirements.
+
